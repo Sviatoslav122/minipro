@@ -1,0 +1,281 @@
+.usersDiv {
+    width: 624px;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.blokIdName {
+    width: 310px;
+    height: 120px;
+    background-color: rgba(29, 36, 33, 0.05);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid #00FFCB;
+    border-radius: 10%;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    color: whitesmoke;
+}
+
+
+.knopka {
+    min-width: 280px;
+    min-height: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 5px;
+}
+
+.knopka::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(280px + 12px);
+    min-height: calc(40px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.knopka:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.knopka:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+.knopka::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 380px;
+        height: 50px;
+        opacity: 0;
+    }
+}
+
+
+.usersTop {
+    text-align: center;
+    height: 50px;
+    color: #4FD1C5;
+    font-size: 35px;
+}
+
+.userBlok {
+    width: 1100px;
+    height: 450px;
+    /*background-color: rgba(39,49,39,0.36);*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bigButton {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 220%);
+    background-color: red;
+    width: 90%;
+    height: 140px;
+}
+
+
+.propertyElement {
+    width: 300px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.objectElement {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.userBlok:hover {
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.bigButton {
+    font-size: 20px;
+    padding: 25px 30px;
+    background-color: rgba(0, 0, 0, 0.73);
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.bigButton:hover {
+    background: #FFFFFF;
+    color: #050801;
+    box-shadow: 0 0 5px #FFFFFF,
+    0 0 25px #FFFFFF,
+    0 0 50px #FFFFFF,
+    0 0 200px #FFFFFF;
+
+}
+
+.postDiv {
+    width: 1499px;
+    height: 300px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 100px 100px 100px 100px lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.titleDiv {
+    font-size: 10px;
+    padding: 5px 30px;
+    background-color: rgba(0, 0, 0, 0.73);
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titleDiv:hover {
+    color: #050801;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF, #050801;
+
+
+}
+
+.postBlok {
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+.postAll {
+    font-size: 18px;
+    width: 400px;
+    height: 110px;
+    font-family: 'Dancing Script', cursive;
+    display: inline-block;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #f2e5c4;
+    background-blend-mode: overlay;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.boxComent {
+
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comment {
+    width: 300px;
+    height: 250px;
+    border: double lightblue 5px;
+    text-align: center;
+    background-color: #f2e5c4;
+}
