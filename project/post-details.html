@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:ital@1&display=swap');
 
         body {
-            background-image: url("https://funart.pro/uploads/posts/2021-04/1618432837_35-funart_pro-p-oboi-fon-fon-knigi-37.jpg");
+            background-image: url("https://catherineasquithgallery.com/uploads/posts/2023-01/1674275998_catherineasquithgallery-com-p-serii-fon-loft-foto-1.jpg");
         }</style>
     <link rel="stylesheet" href="styl.css">
     <title>Document</title>
@@ -49,12 +49,14 @@
             document.body.appendChild(postBlok);
         })
         .catch(error => console.error(error));
+
+
     let urlSearchComent = new URLSearchParams(window.location.search);
     let userIdComent = urlSearchComent.get('id');
     fetch(`https://jsonplaceholder.typicode.com/posts/${userIdComent}/comments`)
         .then(response => response.json())
         .then(comments => {
-            let boxComent = document.createElement('div');
+            const boxComent = document.createElement('div');
             boxComent.classList.add('boxComent');
 
             for (let i = 0; i < comments.length; i++) {

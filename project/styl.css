@@ -1,3 +1,5 @@
+
+/*Style index.HTML*/
 .usersDiv {
     width: 624px;
     height: 600px;
@@ -40,8 +42,6 @@
     letter-spacing: 1.3px;
     font-weight: 700;
     color: #313133;
-
-    background: #4FD1C5;
     background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
     border: none;
     border-radius: 100px;
@@ -109,6 +109,7 @@ button:hover::after, button:focus::after {
     }
 }
 
+/*STyle User-Detalis.HTML*/
 
 .usersTop {
     text-align: center;
@@ -120,7 +121,6 @@ button:hover::after, button:focus::after {
 .userBlok {
     width: 1100px;
     height: 450px;
-    /*background-color: rgba(39,49,39,0.36);*/
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -139,7 +139,7 @@ button:hover::after, button:focus::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 220%);
-    background-color: red;
+
     width: 90%;
     height: 140px;
 }
@@ -232,50 +232,62 @@ button:hover::after, button:focus::after {
 
 }
 
+/*Style Post-Detalis.HTML*/
+
 .postBlok {
-    width: 500px;
-    height: 450px;
+    width: 900px;
+    height: 250px;
     display: flex;
-    flex-direction: column;
     align-content: flex-start;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
+    flex-direction: row;
 
 }
 
 .postAll {
-    font-size: 18px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
     width: 400px;
     height: 110px;
     font-family: 'Dancing Script', cursive;
-    display: inline-block;
-
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #f2e5c4;
+    background-color: #b0abab;
     background-blend-mode: overlay;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 20px 20px 50px rgba(65, 147, 199, 0.2);
 }
 
 .boxComent {
 
-    width: 100%;
-    height: 400px;
+    width: 875px;
+    height: 300px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
+    left: 54.5%;
+    transform: translate(-1000px, 145px);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .comment {
-    width: 300px;
-    height: 250px;
-    border: double lightblue 5px;
+    margin-left: 2px;
+    font-size: 10px;
+    width: 200px;
+    height: 150px;
+    border: double #9a9c9f 5px;
     text-align: center;
-    background-color: #f2e5c4;
+    background-color: #3e3e4b;
+}
+.AllDiv{
+    width: 100%;
+    height: 100%;
 }
