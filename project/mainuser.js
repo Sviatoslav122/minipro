@@ -1,34 +1,4 @@
-
-// Start
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => {
-
-       const usersDiv = document.createElement('div');
-        usersDiv.classList.add('usersDiv');
-        users.forEach(user => {
-            const blokIdName = document.createElement('div');
-            blokIdName.classList.add('blokIdName');
-            blokIdName.innerHTML = `${user.id} .  ${user.name}`;
-
-            const details = document.createElement('button');
-            details.classList.add('knopka')
-            details.textContent = 'Details';
-            details.addEventListener('click', () => {
-                window.location.href = `user-details.html?id=${user.id}`;
-            });
-
-
-            blokIdName.appendChild(details);
-            usersDiv.appendChild(blokIdName);
-            // document.body.appendChild(usersDiv);
-
-        });
-        const inrrElement = document.querySelector('.BoxHtml');
-        inrrElement.appendChild(usersDiv);
-    });
-
-
+<!--    Info user   Display all, without exception, information about the clicked user object-->
 let urlSearch = new URLSearchParams(window.location.search);
 let userId = urlSearch.get('id');
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
@@ -69,9 +39,8 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
             const propertyElement = createPropertyElement(key, value);
             userBlok.appendChild(propertyElement);
         }
-        const inrrElement = document.querySelector('.BoxUserHtml');
-        inrrElement.appendChild(userBlok);
-        // document.body.appendChild(userBlok);
+
+        document.body.appendChild(userBlok);
     });
 
 
@@ -109,7 +78,5 @@ bigButton.addEventListener('click', () => {
             console.error(error);
         });
 });
-const inrrElement = document.querySelector('.BoxUserHtml');
-inrrElement.appendChild(bigButton);
-// document.body.appendChild(bigButton);
 
+document.body.appendChild(bigButton);
